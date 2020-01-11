@@ -6,8 +6,8 @@ if len(sys.argv) == 1:
 else:
         playlist = sys.argv[1]
 
-#" Lyric"," lyric"," (Lyric)"," (official music video)"," (lyric)", " [Lyrics]"," [ Lyrics ]", " (official)", " (Official)"," (lyrics)"," (Lyrics)"," (English Subtitles)", " (Official Music Video)", " (Music Video)"," (Subtitles)",   
-exclude_list = {" - Lyrics"," Lyrics"," lyrics"," ENG Sub", " VIDEO", " Official", " official",
+#" - Lyrics"," Lyric"," lyric"," (Lyric)"," (official music video)"," (lyric)", " [Lyrics]"," [ Lyrics ]", " (official)", " (Official)"," (lyrics)"," (Lyrics)"," (English Subtitles)", " (Official Music Video)", " (Music Video)"," (Subtitles)",   
+exclude_list = {" Lyrics"," lyrics"," ENG Sub", " VIDEO", " Official", " official",
                 " ENG SUB"," Subtitles"," MUSIC"," English Subtitles"," Music Video"}
 
 def Clean(filename):

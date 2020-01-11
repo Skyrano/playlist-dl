@@ -6,16 +6,16 @@ if len(sys.argv) == 1:
 else:
         playlist = sys.argv[1]
 
-exclude_list = {" lyrics"," lyric"," (lyrics)"," ENG Sub", " VIDEO", " Official", " (official music video)", " official",
-                " (lyric)"," ENG SUB"," Subtitles", " [Lyrics]", " [ Lyrics ]", " MUSIC", " (official)", " (Official)",
-                " Lyrics"," Lyric"," (Lyrics)"," (English Subtitles)", " (Official Music Video)", " (Music Video)",
-                " (Lyric)"," English Subtitles"," (Subtitles)", " Music Video"}
+exclude_list = {" Lyrics"," lyrics"," ENG Sub", " VIDEO", " Official", " official",
+                " ENG SUB"," Subtitles"," MUSIC"," English Subtitles"," Music Video"}
 
 def Clean(filename):
         filename = filename.replace("_", " ")
         filename = filename[0:-16] + filename[-4:]
         for word in exclude_list:
                 filename = filename.replace(word, "") 
+                while filename[-5] in [" ","-","."]:
+                        filename = filename[0:-5] + filename[-4:]
         return filename
         
 os.chdir("/data/data/com.termux/files/home/storage/")
