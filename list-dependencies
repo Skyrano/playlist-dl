@@ -1,0 +1,22 @@
+youtube-dl
+  Dépend: python3-pkg-resources
+  Dépend: <python3:any>
+    python3:i386
+    python3
+ |Recommande: aria2
+ |Recommande: wget
+    wget:i386
+  Recommande: curl
+    curl:i386
+  Recommande: ca-certificates
+ |Recommande: ffmpeg
+    ffmpeg:i386
+  Recommande: <libav-tools>
+ |Recommande: mpv
+    mpv:i386
+  Recommande: mplayer
+    mplayer:i386
+  Recommande: phantomjs
+  Recommande: python3-pyxattr
+    python3-xattr
+  Recommande: rtmpdump
