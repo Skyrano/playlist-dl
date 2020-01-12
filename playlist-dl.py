@@ -6,7 +6,6 @@ if len(sys.argv) == 1:
 else:
         playlist = sys.argv[1]
 
-#" - Lyrics"," Lyric"," lyric"," (Lyric)"," (official music video)"," (lyric)", " [Lyrics]"," [ Lyrics ]", " (official)", " (Official)"," (lyrics)"," (Lyrics)"," (English Subtitles)", " (Official Music Video)", " (Music Video)"," (Subtitles)",   
 exclude_list = {" Lyrics"," lyrics"," ENG Sub", " VIDEO", " Official", " official",
                 " ENG SUB"," Subtitles"," MUSIC"," English Subtitles"," Music Video"}
 
@@ -19,10 +18,10 @@ def Clean(filename):
                         filename = filename[0:-5] + filename[-4:]
         return filename
         
-os.chdir("/home/skyrano/Musique/")
-os.system("youtube-dl -x --audio-format mp3 --yes-playlist --download-archive /home/skyrano/Musique/music-list --restrict-filenames {}".format(playlist))
+os.chdir("/data/data/com.termux/files/home/storage/")
+os.system("youtube-dl -x --audio-format mp3 --yes-playlist --download-archive /data/data/com.termux/files/home/storage/music-list --restrict-filenames {}".format(playlist))
 
-for file in os.listdir("/home/skyrano/Musique/"):
+for file in os.listdir("/data/data/com.termux/files/home/storage/"):
         if file.endswith(".mp3"):
                 title = Clean(file)
-                os.system("mv '/home/skyrano/Musique/{}' '/home/skyrano/Musique/ReadyToPhone/{}'".format(file,title))
+                os.system("mv '/data/data/com.termux/files/home/storage/{}' '/data/data/com.termux/files/home/storage/music/DL/{}'".format(file,title))
