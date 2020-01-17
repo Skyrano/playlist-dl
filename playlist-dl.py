@@ -18,10 +18,10 @@ def Clean(filename):
                         filename = filename[0:-5] + filename[-4:]
         return filename
         
-os.chdir("/data/data/com.termux/files/home/storage/")
-os.system("youtube-dl -x --audio-format mp3 --yes-playlist --download-archive /data/data/com.termux/files/home/storage/music-list --restrict-filenames {}".format(playlist))
+os.chdir("/data/data/com.termux/files/home/storage/shared/Documents/playlist-dl/music_dir/")
+os.system("youtube-dl -x --audio-format mp3 --yes-playlist --download-archive /data/data/com.termux/files/home/storage/shared/Documents/playlist-dl/music_dir/music-list --restrict-filenames {}".format(playlist))
 
-for file in os.listdir("/data/data/com.termux/files/home/storage/"):
+for file in os.listdir("/data/data/com.termux/files/home/storage/shared/Documents/playlist-dl/music_dir/"):
         if file.endswith(".mp3"):
                 title = Clean(file)
-                os.system("mv '/data/data/com.termux/files/home/storage/{}' '/data/data/com.termux/files/home/storage/music/DL/{}'".format(file,title))
+                os.system("mv '/data/data/com.termux/files/home/storage/shared/Documents/playlist-dl/music_dir/{}' '/data/data/com.termux/files/home/storage/shared/Music/DL/{}'".format(file,title))

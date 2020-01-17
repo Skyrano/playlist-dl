@@ -11,10 +11,10 @@ fi
 
 if [ $# -eq 1 ]
 then
-	python3 /home/skyrano/Musique/playlist-dl.py $1
+	python3 /data/data/com.termux/files/home/storage/shared/Documents/playlist-dl/playlist-dl.py $1
 elif [ $# -eq 0 ]
 then
-	python3 /home/skyrano/Musique/playlist-dl.py
+	python3 /data/data/com.termux/files/home/storage/shared/Documents/playlist-dl/playlist-dl.py
 else
 	echo 'There can be at most one argument'
 	echo 'Use -h or --help for help'
