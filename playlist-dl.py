@@ -24,4 +24,4 @@ os.system("youtube-dl -x --audio-format mp3 --yes-playlist --download-archive /d
 for file in os.listdir("/data/data/com.termux/files/home/storage/shared/Documents/playlist-dl/music_dir/"):
         if file.endswith(".mp3"):
                 title = Clean(file)
-                os.system("mv '/data/data/com.termux/files/home/storage/shared/Documents/playlist-dl/music_dir/{}' '/data/data/com.termux/files/home/storage/shared/Music/DL/{}'".format(file,title))
+                os.system("mv '/data/data/com.termux/files/home/storage/shared/Documents/playlist-dl/music_dir/{}' '/data/data/com.termux/files/home/storage/shared/Music/{}'".format(file,title))
